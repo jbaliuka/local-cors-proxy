@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>AJAX</h2>
+
+<h2>Retrieve data from URL</h2>
+
+<p><b>Status:</b> <span id="status"></span></p>
+<p><b>Status text:</b> <span id="statusText"></span></p>
+<p><b>Response:</b> <span id="responseText"></span></p>
+
+<b></b>URL:</b> <input type="text" id="url"/>
+<br>
+<b>Token: </b><input type="text" id="token"/>
+<button onclick="loadDoc(document.getElementById('url').value)">Get JSON data</button>
+
+<script>
+    function loadDoc(url) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('status').innerHTML = this.status;
+                document.getElementById('statusText').innerHTML = this.statusText;
+                document.getElementById('responseText').innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.setRequestHeader("Authorization", " Bearer " + document.getElementById('token').value);
+        xhttp.send();
+    }
+</script>
+
+</body>
+</html>

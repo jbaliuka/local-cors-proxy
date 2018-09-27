@@ -3,10 +3,11 @@
   "version": "1.0.2",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/lcp.js"
   },
   "bin": {
-    "lcp": "./bin/lcp.js"
+    "lcp": "./bin/lcp.js "
   },
   "author": "Gary Meehan",
   "license": "MIT",
@@ -14,7 +15,13 @@
     "type": "git",
     "url": "git+https://github.com/garmeeh/local-cors-proxy.git"
   },
-  "keywords": ["cors", "proxy", "simple", "node", "express"],
+  "keywords": [
+    "cors",
+    "proxy",
+    "simple",
+    "node",
+    "express"
+  ],
   "bugs": {
     "url": "https://github.com/garmeeh/local-cors-proxy/issues"
   },
